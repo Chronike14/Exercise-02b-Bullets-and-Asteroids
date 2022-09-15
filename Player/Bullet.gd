@@ -6,7 +6,7 @@ var damage = 1
 
 
 func _ready():
-	velocity = Vector2(0, -speed)
+	velocity = Vector2(0,-speed).rotated(rotation)
 
 func _physics_process(_delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
